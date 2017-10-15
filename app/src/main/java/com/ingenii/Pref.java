@@ -9,6 +9,11 @@ import android.preference.PreferenceManager;
  */
 
 public class Pref {
+    private final static String CompanyLogo = "CompanyLogo";
+
+
+    private final static String Profile = "profileUrl";
+
     private final static String Name = "name";
     private final static String Company = "company";
     private final static String Logo = "logo";
@@ -16,6 +21,24 @@ public class Pref {
     private final static String Designation = "Designation";
     private static SharedPreferences getSharedPreferenceInstanced(Context context) {
         return PreferenceManager.getDefaultSharedPreferences(context);
+    }
+    public static String getProfile(Context context) {
+
+        return  getSharedPreferenceInstanced(context).getString(Profile, "");
+    }
+    public static void setProfile(Context context, String status) {
+        SharedPreferences.Editor editor = getSharedPreferenceInstanced(context).edit();
+        editor.putString(Profile,status );
+        editor.apply();
+    }
+    public static String getCompanyLogo(Context context) {
+
+        return  getSharedPreferenceInstanced(context).getString(CompanyLogo, "");
+    }
+    public static void setCompanyLogo(Context context, String status) {
+        SharedPreferences.Editor editor = getSharedPreferenceInstanced(context).edit();
+        editor.putString(CompanyLogo,status );
+        editor.apply();
     }
 
     public static String getName(Context context) {

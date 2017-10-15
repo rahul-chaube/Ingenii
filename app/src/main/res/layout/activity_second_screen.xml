@@ -1,15 +1,17 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fbutton="http://schemas.android.com/tools"
     android:id="@+id/LlMain_layer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/fbutton_color_amethyst"
-    android:orientation="vertical"
-    >
+    android:background="@drawable/thems3"
+    android:orientation="vertical">
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
         android:orientation="vertical"
         android:scrollbars="none">
 
@@ -20,7 +22,8 @@
             android:orientation="vertical">
 
             <RelativeLayout
-                android:layout_width="130dp"
+                android:id="@+id/editProfilePic"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="18dp"
                 android:layout_marginTop="18dp">
@@ -45,17 +48,20 @@
                     android:id="@+id/image_edit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/imgProfileView"
+                    android:layout_alignParentBottom="true"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
                     android:adjustViewBounds="true"
-                    android:padding="6dp" />
+                    android:padding="6dp"
+                    android:src="@drawable/ic_mode_edit_white_24dp" />
             </RelativeLayout>
 
             <com.github.florent37.materialtextfield.MaterialTextField
+                android:id="@+id/mname"
                 android:layout_width="match_parent"
+                app:mtf_image="@drawable/ic_border_color_black_24dp"
                 android:layout_height="wrap_content"
-                app:mtf_labelColor="#666">
+                app:mtf_labelColor="#fff">
 
                 <EditText
                     android:id="@+id/userName"
@@ -71,7 +77,9 @@
             <com.github.florent37.materialtextfield.MaterialTextField
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:mtf_labelColor="#666">
+                android:id="@+id/mdesignation"
+                app:mtf_image="@drawable/ic_border_color_black_24dp"
+                app:mtf_labelColor="#fff">
 
                 <EditText
                     android:id="@+id/designation"
@@ -86,7 +94,9 @@
             <com.github.florent37.materialtextfield.MaterialTextField
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:mtf_labelColor="#666">
+                android:id="@+id/mCompany"
+                app:mtf_image="@drawable/ic_border_color_black_24dp"
+                app:mtf_labelColor="#fff">
 
                 <EditText
                     android:id="@+id/company"
@@ -101,7 +111,9 @@
             <com.github.florent37.materialtextfield.MaterialTextField
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:mtf_labelColor="#666">
+                android:id="@+id/mLogo"
+                app:mtf_image="@drawable/ic_photo_camera_black_24dp"
+                app:mtf_labelColor="#fff">
 
                 <EditText
                     android:id="@+id/companyLogo"
@@ -116,7 +128,9 @@
             <com.github.florent37.materialtextfield.MaterialTextField
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:mtf_labelColor="#666">
+                android:id="@+id/mUrl"
+                app:mtf_image="@drawable/ic_web_black_24dp"
+                app:mtf_labelColor="#fff">
 
                 <EditText
                     android:id="@+id/url"
@@ -129,15 +143,17 @@
             </com.github.florent37.materialtextfield.MaterialTextField>
 
             <info.hoang8f.widget.FButton
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="20dp"
                 android:id="@+id/done"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
                 android:padding="10dp"
                 android:text="Done"
                 android:textAlignment="center"
-                android:textColor="#fff" />
+                android:textColor="#fff"
+                fbutton:buttonColor="@color/fbutton_color_peter_river"
+                fbutton:shadowColor="@color/fbutton_color_belize_hole" />
 
 
         </LinearLayout>
