@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Ingenii</string>
+    <string name="create_profile">Create Profile</string>
+    <string name="show_profile">Show Profile</string>
+    <string name="ingenrii_demo_application">ingenii Demo Application</string>
+    <string name="create_profile_and_show_profile">Create Profile and Show Profile</string>
 </resources>

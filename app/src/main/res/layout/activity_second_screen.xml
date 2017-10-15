@@ -1,0 +1,146 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/LlMain_layer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fbutton_color_amethyst"
+    android:orientation="vertical"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="18dp"
+                android:layout_marginTop="18dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imgProfileView"
+                    android:layout_width="115dp"
+                    android:layout_height="115dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/profile"
+                    app:civ_border_color="@color/fbutton_color_amethyst"
+                    app:civ_border_width="0dp" />
+
+                <!--android:background="@drawable/ic_round"-->
+
+
+                <ImageView
+                    android:id="@+id/image_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/imgProfileView"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:adjustViewBounds="true"
+                    android:padding="6dp" />
+            </RelativeLayout>
+
+            <com.github.florent37.materialtextfield.MaterialTextField
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:mtf_labelColor="#666">
+
+                <EditText
+                    android:id="@+id/userName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="User Name"
+                    android:textColor="#333"
+                    android:textSize="15sp" />
+
+            </com.github.florent37.materialtextfield.MaterialTextField>
+
+
+            <com.github.florent37.materialtextfield.MaterialTextField
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:mtf_labelColor="#666">
+
+                <EditText
+                    android:id="@+id/designation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Designation"
+                    android:textColor="#333"
+                    android:textSize="15sp" />
+
+            </com.github.florent37.materialtextfield.MaterialTextField>
+
+            <com.github.florent37.materialtextfield.MaterialTextField
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:mtf_labelColor="#666">
+
+                <EditText
+                    android:id="@+id/company"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Company"
+                    android:textColor="#333"
+                    android:textSize="15sp" />
+
+            </com.github.florent37.materialtextfield.MaterialTextField>
+
+            <com.github.florent37.materialtextfield.MaterialTextField
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:mtf_labelColor="#666">
+
+                <EditText
+                    android:id="@+id/companyLogo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Company Logo"
+                    android:textColor="#333"
+                    android:textSize="15sp" />
+
+            </com.github.florent37.materialtextfield.MaterialTextField>
+
+            <com.github.florent37.materialtextfield.MaterialTextField
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:mtf_labelColor="#666">
+
+                <EditText
+                    android:id="@+id/url"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Compay Website Url"
+                    android:textColor="#333"
+                    android:textSize="15sp" />
+
+            </com.github.florent37.materialtextfield.MaterialTextField>
+
+            <info.hoang8f.widget.FButton
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:id="@+id/done"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Done"
+                android:textAlignment="center"
+                android:textColor="#fff" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>
